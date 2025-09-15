@@ -1,0 +1,129 @@
+/* CSS Variables for Theming */
+:root {
+  --bg-color: #fafbfc;
+  --text-color: #222;
+  --sidebar-bg: #f4f4f4;
+  --card-bg: #fff;
+  --accent-color: #0077ff;
+  --sidebar-text: #222;
+  --header-bg: #fff;
+}
+[data-theme="dark"] {
+  --bg-color: #222;
+  --text-color: #f4f4f4;
+  --sidebar-bg: #232a3b;
+  --card-bg: #232a3b;
+  --accent-color: #00c6ff;
+  --sidebar-text: #f4f4f4;
+  --header-bg: #232a3b;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+.sidebar {
+  grid-area: sidebar;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 180px;
+  align-items: flex-start;
+}
+.header {
+  grid-area: header;
+  background: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  min-height: 60px;
+}
+.main {
+  grid-area: main;
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.card {
+  background: var(--card-bg);
+  padding: 16px 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  background: #f4f4f4;
+}
+nav a {
+  color: var(--sidebar-text);
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+nav a:hover {
+  background: #eaeaea;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+#theme-toggle {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#theme-toggle:hover {
+  background: #005bb5;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+  .header {
+    min-height: 50px;
+    padding: 0 10px;
+  }
+  .main {
+    padding: 10px;
+    gap: 10px;
+  }
+  .card {
+    padding: 10px 6px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+  }
+}

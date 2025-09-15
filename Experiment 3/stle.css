@@ -1,0 +1,141 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  padding: 16px;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 16px;
+}
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  font-size: 22px;
+  color: #222;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Header Accent */
+.header-accent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.accent-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6dd5ed 0%, #3498db 100%);
+  box-shadow: 0 2px 8px rgba(52,152,219,0.15);
+  display: inline-block;
+}
+
+select {
+  padding: 6px 12px;
+  font-size: 15px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #222;
+  font-weight: normal;
+  cursor: pointer;
+  margin-left: 8px;
+}
+}
+
+/* Product Grid */
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+}
+
+/* Product Card */
+/* Simple Product Card */
+/* Ultra-simple product card */
+.product.simple {
+  background: #fafafa;
+  padding: 10px 6px 8px 6px;
+  text-align: left;
+  border: 1px solid #eee;
+  position: relative;
+}
+.product.simple .icon {
+  font-size: 32px;
+  margin-bottom: 6px;
+  display: block;
+}
+}
+}
+
+.product:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(52,152,219,0.13);
+  border-color: #b2bec3;
+}
+
+/* Remove image styling for simple design */
+}
+
+.product h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #222;
+  font-weight: bold;
+}
+
+.product p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.product span {
+  font-weight: bold;
+  font-size: 14px;
+  color: #e67e22;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Message */
+.message {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 15px;
+  color: #888;
+  background: none;
+  border-radius: 0;
+  padding: 10px 0;
+  box-shadow: none;
+}
